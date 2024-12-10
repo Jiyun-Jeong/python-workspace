@@ -56,3 +56,44 @@ print(mix_list)
 # 리스트 확장
 num_list.extend(mix_list)
 print(num_list)
+
+# 5_2 사전 자료형
+# cabinet = {3:"유재석", 100:"김태호"}
+# print(cabinet[3])
+# print(cabinet[100])
+
+# print(cabinet.get(3)
+# print(cabinet[5])
+# get을 사용해서 없는 숫자를 가져오면 None을 반환, get이 아닌 []를 사용하면 오류가 나서 그 뒤의 print 작동 안하고 있음. (프로그램 종료됨)
+# print(cabinet.get(5, "사용 가능"))
+# print("Hi")
+
+# print(3 in cabinet) # True
+# print(5 in cabinet) # False
+
+cabinet = {"A-3":"유재석", "B-100":"김태호"}
+print(cabinet["A-3"])
+print(cabinet["B-100"])
+
+# 새 손님
+print(cabinet)
+cabinet["A-3"] = "김종국"
+cabinet["C-20"] = "조세호"
+print(cabinet)
+
+# 간 손님
+del cabinet["A-3"]
+print(cabinet)
+
+# key 들만 출력
+print(cabinet.keys())
+
+# value 들만 출력
+print(cabinet.values())
+
+# key, value 쌍으로 출력
+print(cabinet.items())
+
+# 목욕탕 폐점
+cabinet.clear()
+print(cabinet)
